@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="warningBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe500; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb700; stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="warningHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8a8; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffee58; stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="exclamationFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#555555; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#222222; stop-opacity:1" />
+    </linearGradient>
+    <filter id="strongShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="blur"/>
+      <feOffset in="blur" dx="4" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.4" result="offsetColor"/>
+      <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#strongShadow)">
+    <!-- Triangle Bevel - Darker Base -->
+    <polygon points="50,5 97,87 3,87" fill="#e6a800" stroke="#bf8c00" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Triangle Main Color -->
+    <polygon points="50,8 94,85 6,85" fill="url(#warningBase)" stroke-linejoin="round"/>
+    <!-- Triangle Highlight -->
+    <polygon points="50,11 91,83 9,83" fill="url(#warningHighlight)" stroke-linejoin="round" opacity="0.8"/>
+
+    <!-- Exclamation Mark -->
+    <path d="M47,25 L53,25 L50.5,65 L49.5,65 Z" fill="url(#exclamationFill)"/>
+    <circle cx="50" cy="75" r="6" fill="url(#exclamationFill)"/>
+
+  </g>
+</svg>

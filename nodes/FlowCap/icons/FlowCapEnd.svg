@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Flag shading gradient -->
+    <linearGradient id="flagShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff; stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f8f8f8; stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e8e8e8; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dddddd; stop-opacity:1" />
+    </linearGradient>
+    <!-- Checker pattern -->
+     <pattern id="checkerPattern" patternUnits="userSpaceOnUse" width="25" height="25" patternTransform="rotate(10)">
+        <rect width="12.5" height="12.5" fill="#555555"/>
+        <rect x="12.5" y="12.5" width="12.5" height="12.5" fill="#555555"/>
+    </pattern>
+    <!-- Shadow Filter -->
+    <filter id="flagShadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="3" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.3" result="offsetColor"/>
+      <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#flagShadow)">
+    <!-- Tiny Pole Stub -->
+    <rect x="5" y="30" width="6" height="40" rx="2" ry="2" fill="#999999" />
+
+    <!-- Large Waving Flag Background/Shape -->
+    <path d="M10,10
+             C 30,-5 60,25 95,10
+             L 95,70
+             C 60,85 30,55 10,70
+             Z"
+          fill="url(#flagShade)" stroke="#444444" stroke-width="1.5" stroke-linejoin="round" />
+
+    <!-- Checker Pattern Applied -->
+     <path d="M10,10
+             C 30,-5 60,25 95,10
+             L 95,70
+             C 60,85 30,55 10,70
+             Z"
+          fill="url(#checkerPattern)" />
+  </g>
+
+</svg>
