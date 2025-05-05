@@ -1,19 +1,22 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-flowcaps",
   "version": "0.1.0",
-  "description": "",
+  "description": "Adds visual marker nodes (FlowCaps) to n8n workflows for improved readability.",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "flowcap",
+    "marker",
+    "visual",
+    "noop"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Peter Joslyn"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/pjawz/n8n-nodes-flowcaps"
   },
   "engines": {
     "node": ">=18.10",
@@ -25,32 +28,33 @@
     "preinstall": "npx only-allow pnpm",
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
-    "format": "prettier nodes credentials --write",
+    "format": "prettier --write nodes credentials",
     "lint": "eslint nodes credentials package.json",
-    "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+    "lint:fix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "pnpm run build && pnpm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
   },
   "files": [
     "dist"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
-    ],
+    "credentials": [],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/FlowCap/FlowCapDone.node.js",
+      "dist/nodes/FlowCap/FlowCapEnd.node.js",
+      "dist/nodes/FlowCap/FlowCapWarning.node.js"
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^7.15.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "@types/express": "^4.17.6",
+    "@types/request-promise-native": "^1.0.17",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint-plugin-n8n-nodes-base": "^1.11.0",
     "gulp": "^4.0.2",
-    "prettier": "^3.3.2",
-    "typescript": "^5.5.3"
+    "n8n-core": "^0.125.0",
+    "n8n-workflow": "^0.112.0",
+    "prettier": "^2.7.1",
+    "typescript": "~4.8.4"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
