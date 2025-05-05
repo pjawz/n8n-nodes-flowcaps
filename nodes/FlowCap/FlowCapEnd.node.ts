@@ -14,7 +14,7 @@ export class FlowCapEnd implements INodeType {
     version: 1,
     description: 'Indicates final end-point of a workflow.',
     defaults: {
-      name: '🏁 End',
+      name: 'End',
       color: '#555555',
     },
     inputs: ['main'],

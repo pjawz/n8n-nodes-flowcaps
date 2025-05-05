@@ -14,7 +14,7 @@ export class FlowCapWarning implements INodeType {
 		version: 1,
 		description: 'Flags risky or temporary sections of a workflow.',
 		defaults: {
-			name: '⚠ Warning',
+			name: 'Warning',
 		},
 		inputs: ['main'],
 		outputs: ['main'],

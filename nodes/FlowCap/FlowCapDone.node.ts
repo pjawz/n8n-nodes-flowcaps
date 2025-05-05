@@ -14,7 +14,7 @@ export class FlowCapDone implements INodeType {
     version: 1,
     description: 'Marks successful completion of a workflow branch.',
     defaults: {
-      name: '✔ Done',
+      name: 'Done',
       color: '#00cc66',
     },
     inputs: ['main'],
