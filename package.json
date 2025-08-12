@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-flowcaps",
-  "version": "0.1.0",
+  "version": "0.3.6",
   "description": "Adds visual marker nodes (FlowCaps) to n8n workflows for improved readability.",
   "keywords": [
     "n8n-community-node-package",
@@ -40,9 +40,9 @@
     "n8nNodesApiVersion": 1,
     "credentials": [],
     "nodes": [
-      "dist/nodes/FlowCap/FlowCapDone.node.js",
-      "dist/nodes/FlowCap/FlowCapEnd.node.js",
-      "dist/nodes/FlowCap/FlowCapWarning.node.js"
+      "dist/nodes/FlowCapDone/FlowCapDone.node.js",
+      "dist/nodes/FlowCapEnd/FlowCapEnd.node.js",
+      "dist/nodes/FlowCapWarning/FlowCapWarning.node.js"
     ]
   },
   "devDependencies": {

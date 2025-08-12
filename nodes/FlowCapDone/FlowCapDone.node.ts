@@ -5,17 +5,17 @@ import {
   INodeTypeDescription,
 } from 'n8n-workflow';
 
-export class FlowCapEnd implements INodeType {
+export class FlowCapDone implements INodeType {
   description: INodeTypeDescription = {
-    displayName: '🏁 End',
-    name: 'flowCapEnd',
-    icon: 'file:FlowCapEnd.svg',
+    displayName: 'Done',
+    name: 'flowCapDone',
+    icon: 'file:FlowCapDone.svg',
     group: ['transform'],
     version: 1,
-    description: 'Indicates final end-point of a workflow.',
+    description: 'Marks successful completion of a workflow branch.',
     defaults: {
-      name: 'End',
-      color: '#555555',
+      name: 'Done',
+      color: '#00cc66',
     },
     inputs: ['main'],
     outputs: ['main'],

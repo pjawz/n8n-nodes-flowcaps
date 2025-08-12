@@ -7,7 +7,7 @@ import {
 
 export class FlowCapWarning implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: '⚠ Warning',
+		displayName: 'Warning',
 		name: 'flowCapWarning',
 		icon: 'file:FlowCapWarning.svg',
 		group: ['transform'],
@@ -15,6 +15,7 @@ export class FlowCapWarning implements INodeType {
 		description: 'Flags risky or temporary sections of a workflow.',
 		defaults: {
 			name: 'Warning',
+			color: '#ffcc00',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
@@ -26,4 +27,3 @@ export class FlowCapWarning implements INodeType {
 		return [this.getInputData()];
 	}
 }
-``;
