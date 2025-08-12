@@ -11,18 +11,18 @@ These nodes are functionally identical to the built-in `NoOp` (No Operation) nod
 
 - **✔ Done (`flowCapDone`)**
 
-  - **Icon:** ![Done Icon](nodes/FlowCap/icons/FlowCapDone.svg?raw=true&sanitize=true)
+  - **Icon:** ![Done Icon](nodes/FlowCapDone/done.svg?raw=true&sanitize=true)
   - **Color:** `#00cc66`
   - **Description:** Marks the successful completion or a specific success path within a workflow branch.
 
 - **🏁 End (`flowCapEnd`)**
 
-  - **Icon:** ![End Icon](nodes/FlowCap/icons/FlowCapEnd.svg?raw=true&sanitize=true)
+  - **Icon:** ![End Icon](nodes/FlowCapEnd/end.svg?raw=true&sanitize=true)
   - **Color:** `#555555`
   - **Description:** Clearly indicates the final end-point or terminal state of a workflow or major section.
 
 - **⚠ Warning (`flowCapWarning`)**
-  - **Icon:** ![Warning Icon](nodes/FlowCap/icons/FlowCapWarning.svg?raw=true&sanitize=true)
+  - **Icon:** ![Warning Icon](nodes/FlowCapWarning/warning.svg?raw=true&sanitize=true)
   - **Color:** `#ffcc00`
   - **Description:** Flags potentially problematic, risky, incomplete, or temporary sections of a workflow that require attention.
 
@@ -43,11 +43,20 @@ They require no configuration and simply pass data through.
 
 ## Compatibility
 
-Tested with n8n version X.Y.Z. (Update with your tested version)
+Requires Node.js >=20.15 and n8n community node support.
 
 ## Development
 
-Clone this repository, run `npm install`, and then `npm run build` or `npm run dev`.
+Clone this repository, run `pnpm install`, and then `pnpm run build` or `pnpm run dev`.
+
+### Troubleshooting
+
+If icons don't appear:
+
+1. Run `pnpm run build` to ensure icons are copied to `dist/nodes/`
+2. Clear n8n cache: `rm -rf ~/.cache/n8n/`
+3. Restart n8n and hard refresh browser (Ctrl+Shift+R)
+4. Verify icon endpoints: `http://localhost:5678/icons/CUSTOM/path/to/icon.svg`
 
 ## License
 

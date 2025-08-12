@@ -9,7 +9,7 @@ export class FlowCapWarning implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Warning',
 		name: 'flowCapWarning',
-		icon: 'file:FlowCapWarning.svg',
+		icon: 'file:warning.svg',
 		group: ['transform'],
 		version: 1,
 		description: 'Flags risky or temporary sections of a workflow.',
