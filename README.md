@@ -3,6 +3,8 @@
 [![NPM Version](https://img.shields.io/npm/v/n8n-nodes-flowcaps.svg?style=flat&logo=npm)](https://www.npmjs.com/package/n8n-nodes-flowcaps)
 [![NPM Downloads](https://img.shields.io/npm/dt/n8n-nodes-flowcaps.svg?style=flat&logo=npm)](https://www.npmjs.com/package/n8n-nodes-flowcaps)
 
+![FlowCaps Nodes](public/v1-nodes.png)
+
 This is an n8n community node package that provides simple visual marker nodes, called **FlowCaps**, to help organize and clarify your n8n workflows.
 
 These nodes are functionally identical to the built-in `NoOp` (No Operation) node – they simply pass input data through unchanged. Their primary purpose is to serve as visual cues or end-caps within a workflow diagram.
@@ -43,7 +45,7 @@ They require no configuration and simply pass data through.
 
 ## Compatibility
 
-Requires Node.js >=20.15 and n8n community node support.
+Requires Node.js >=18.10 and n8n community node support.
 
 ## Development
 
